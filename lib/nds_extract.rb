@@ -27,7 +27,10 @@ def directors_totals(nds)
     result[director] = 0
     while movie_index < nds[director_index][:movies].length do
       #Explanation!
-      #
+      #director[director_index][name]
+      #movies[movie_index][movies]
+      #result is full of Hashes with keys :movies and :worldwide_gross
+      
       result[director] += nds[director_index][:movies][movie_index][:worldwide_gross]
       movie_index += 1
     end
